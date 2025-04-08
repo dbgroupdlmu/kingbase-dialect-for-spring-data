@@ -1,0 +1,1 @@
+# kingbase-dialect-for-spring-data
