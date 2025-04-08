@@ -8,6 +8,5 @@
 
 3.通过在 META-INF 下创建 spring.factories 资源来注册提供程序，并通过添加一行来执行注册
 
-org.springframework.data.jdbc.repository.config.DialectResolver$JdbcDialectProvider方言解析器的全程
 
 本项目提供了人大金仓三种模式使用spring data的方言和方言解析器
