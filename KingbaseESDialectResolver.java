@@ -1,8 +1,5 @@
-package com.example.testkingbasedata;
+package com.example.testkingbasedata.dialect;
 
-import org.springframework.data.jdbc.core.dialect.JdbcMySqlDialect;
-import org.springframework.data.jdbc.core.dialect.JdbcPostgresDialect;
-import org.springframework.data.jdbc.core.dialect.JdbcSqlServerDialect;
 import org.springframework.data.jdbc.repository.config.DialectResolver;
 import org.springframework.data.relational.core.dialect.Dialect;
 import org.springframework.jdbc.core.ConnectionCallback;
@@ -39,6 +36,8 @@ public class KingbaseESDialectResolver implements DialectResolver.JdbcDialectPro
                         return KingbaseOracleDialect.INSTANCE; // Oracle 兼容模式
                     case "mysql":
                         return KingbaseMySqlDialect.INSTANCE; // MySQL 兼容模式
+                    case "pg":
+                        return KingbasePgDialect.INSTANCE; //Pg 兼容模式
                     default:
                         throw new IllegalStateException("Unsupported Kingbase8 mode: " + databaseMode);
                 }
